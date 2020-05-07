@@ -81,3 +81,32 @@ for  counter in -5...5
     }
 }
 
+// break and continue
+// jumping from inner to outer loops
+
+outer: for i in 1...3 {
+    inner: for j in 1...3 {
+        if j > 2 {
+            continue outer
+        }
+        print("i: \(i)  j: \(j)")
+    }
+}
+// i: 1  j: 1
+// i: 1  j: 2
+// i: 2  j: 1
+// i: 2  j: 2
+// i: 3  j: 1
+// i: 3  j: 2
+
+outer: for i in 1...5 {
+   inner: for j in 1...5 {
+        if (j * i) > 3 {
+            break outer
+        }
+        print("\(i) * \(j) = \(i * j)")
+   }
+}
+// 1 * 1 = 1
+// 1 * 2 = 2
+// 1 * 3 = 3
