@@ -2,5 +2,10 @@
 <Timeline
    version = "3.0">
    <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/walkee28/Developer/SwiftCourseMay2020/MoreClosures.playground#CharacterRangeLen=8&amp;CharacterRangeLoc=627&amp;EndingColumnNumber=34&amp;EndingLineNumber=34&amp;StartingColumnNumber=26&amp;StartingLineNumber=34&amp;Timestamp=611746941.834172"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
    </TimelineItems>
 </Timeline>
