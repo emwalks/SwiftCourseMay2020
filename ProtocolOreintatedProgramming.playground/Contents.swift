@@ -2,16 +2,23 @@ import UIKit
 
 var str = "Hello, playground"
 
+// MARK:- Inheritance
 class Person1 {
     func whatDoIDo() {
         print("I am an instance of type: \(self)")
         print("I perform general tasks")
     }
 }
-class Engineer1: Person1 {
+
+
+class Engineer1: Person1
+{
 }
+
 let engineer1 = Engineer1()
+
 engineer1.whatDoIDo()
+
 class Person2 {
     func whatDoIDo() {
         print("I am an instance of type: \(self)")
@@ -22,13 +29,17 @@ class Person2 {
         print("I perform general tasks")
     }
 }
+
+
 class Engineer2: Person2 {
     override func specificTask() {
         print("I fix computers")
     }
 }
+
 let engineer2 = Engineer2()
 engineer2.whatDoIDo()
+
 class Person3 {
     func whatDoIDo() {
         print("I am an instance of type: \(self)")
@@ -39,16 +50,19 @@ class Person3 {
         print("I perform general tasks")
     }
 }
+
 class Engineer3: Person3 {
     override func specificTask() {
         print("I fix computers")
     }
 }
+
 class Trainer3: Person3 {
     override func specificTask() {
         print("I train people")
     }
 }
+
 let engineer3 = Engineer3()
 engineer3.whatDoIDo()
 let trainer3 = Trainer3()
@@ -61,10 +75,14 @@ func processPeople(allPeople: [Person3]) {
     }
 }
 processPeople(allPeople: allPeople)
+
+//MARK:- PROTOCOLS
+
 protocol Person {
     func WhatDoIDo()
     func specificTask()
 }
+
 extension Person {
     func WhatDoIDo() {
         print("I am an instance of type: \(self)")
@@ -72,25 +90,32 @@ extension Person {
     }
 }
 struct Trainer { }
-struct Engineer { }
+
 extension Trainer: Person {
     func specificTask() {
         print("I fix computers")
     }
 }
+
+struct Engineer { }
+
 extension Engineer: Person {
     func specificTask() {
         print("I train people")
     }
 }
+
 func processPeople2(allPeople: [Person]) {
     for person in allPeople {
         person.specificTask()
         print("")
     }
 }
+
 let variousPeople: [Person] = [Trainer(), Engineer(), Trainer(), Engineer()]
+
 processPeople2(allPeople: variousPeople)
+
 protocol Sales {
     func sell()
 }
